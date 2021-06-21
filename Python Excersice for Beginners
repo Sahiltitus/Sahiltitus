@@ -1,0 +1,15 @@
+ t=input(" Enter the teaperature in Celsius or Fahrenheit ie. 104F,30C : ")
+degree=int(t[:-1]) #Returns first letter to second last word part from temperature for eg if input t(temperature) is 30C or 104F then it will take only integer part ie 30 or 104 converts it into int
+corf=t[-1] #Returns last word from t for eg. if input t is 30C or 104F it will return only C and F 
+if corf not in["C","c","Celsius","celsius"]: #checking weather input temperature is in Fahrenheit.If its true then it execute Below formula which converts Fahrenheit to Celsius
+  r=int((5*degree-160)/9)
+  o_c="Celsius"
+elif corf not in["F","f","Fahrenheit","fahrenheit"]: #checking weather input temperature is in Celsius.If its true then it execute Below formula which converts Celsius to Fahrenheit
+  r=int(((9*degree+160)/5))
+  o_c="Fahrenheit"
+else:
+  print("Wrong input")
+print("The Temperature in",o_c,"is",r ,"degree") 
+#For Eg: 
+#input temp=104
+#output= The Temperature in Celsius is 40 degree
